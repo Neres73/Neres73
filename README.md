@@ -71,7 +71,7 @@
 | 🌐 **Coupa RPA** | Bot para aprovação de requisições e recebimentos no Coupa via Playwright | Python, Playwright |
 | 🛰️ **SmartInfra Orbital** | Sistema de monitoramento de infraestrutura espacial (console app) | Java, DDD |
 | 📡 **Bateia** | Plataforma de inteligência conversacional para análise de reuniões comerciais — GS FIAP 2026 | Java, Python, SQL |
-| ⚽ **[PassaBola](https://passa-bola-fnl.vercel.app)** | Sistema web de gerenciamento de eventos esportivos com dashboard analytics, CRUD e geração de chaves — GS FIAP 2026 | React, Tailwind, Chart.js |
+| ⚽ **[PassaBola](https://passa-bola-fnl.vercel.app)** | Sistema web de gerenciamento de eventos esportivos com dashboard analytics, CRUD e geração de chaves — GS FIAP 2025 | React, Tailwind, Chart.js |
 | 🏠 **[Airbnb Clone](https://neres73.github.io/CP-CAIO/)** | Landing page responsiva simulando anúncio do Airbnb — layout com Flexbox, Grid, galeria de fotos e avaliações | HTML5, CSS3 |
 
 ---
