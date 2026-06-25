@@ -2,7 +2,7 @@
 
 <p align="center">
   <b>Estudante de Engenharia de Software · FIAP</b><br/>
-  Automação de Processos · Full Stack · Data Science
+  Automação de Processos · Full Stack · Backend · Data Science
 </p>
 
 <p align="center">
@@ -67,12 +67,14 @@
 
 | Projeto | Descrição | Tech |
 |--------|-----------|------|
-| 🔄 **SAP Automations** | Automações de processos corporativos: aprovações Coupa, NFS-e, ordens de serviço | Python, SAP GUI |
-| 🌐 **Coupa RPA** | Bot para aprovação de requisições e recebimentos no Coupa via Playwright | Python, Playwright |
+| 🔄 **[Coupa Aprovações](https://github.com/Neres73/Coupa_aprovacoes)** | Automação de aprovação de requisições no Coupa via Playwright | Python, Playwright |
+| 📦 **[Coupa Recebimento](https://github.com/Neres73/Coupa_recebimento)** | Automação de processamento de recebimentos no Coupa | Python, Playwright |
+| 🎫 **[ServiceNow Chamados](https://github.com/Neres73/automacao_servicenow_chamados)** | Automação de fechamento de ordens de serviço no ServiceNow via SAP | Python, SAP GUI |
+| 🧮 **[Dynamic Programming](https://github.com/Neres73/Dynamic-programming)** | Estruturas de dados e algoritmos com programação dinâmica — GS FIAP 2026 | Python |
+| ⚽ **[PassaBola](https://github.com/PedroMarchese01/Passa-Bola)** | Sistema web de gerenciamento de eventos esportivos com dashboard analytics, CRUD e geração de chaves — GS FIAP 2026 | React, Tailwind, Chart.js |
+| 🏠 **[Airbnb Clone](https://github.com/Neres73/CP-CAIO)** | Landing page responsiva simulando anúncio do Airbnb — Flexbox, Grid, galeria e avaliações | HTML5, CSS3 |
 | 🛰️ **SmartInfra Orbital** | Sistema de monitoramento de infraestrutura espacial (console app) | Java, DDD |
 | 📡 **Bateia** | Plataforma de inteligência conversacional para análise de reuniões comerciais — GS FIAP 2026 | Java, Python, SQL |
-| ⚽ **[PassaBola](https://passa-bola-fnl.vercel.app)** | Sistema web de gerenciamento de eventos esportivos com dashboard analytics, CRUD e geração de chaves — GS FIAP 2025 | React, Tailwind, Chart.js |
-| 🏠 **[Airbnb Clone](https://neres73.github.io/CP-CAIO/)** | Landing page responsiva simulando anúncio do Airbnb — layout com Flexbox, Grid, galeria de fotos e avaliações | HTML5, CSS3 |
 
 ---
 
