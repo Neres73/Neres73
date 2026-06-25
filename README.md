@@ -2,7 +2,7 @@
 
 <p align="center">
   <b>Estudante de Engenharia de Software · FIAP</b><br/>
-  Automação de Processos · Full Stack · Backend · Data Science
+  Automação de Processos · Full Stack · Data Science
 </p>
 
 <p align="center">
