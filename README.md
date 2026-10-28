@@ -26,23 +26,53 @@ Boa parte dessa rotina é repetitiva. Quando identifico uma tarefa que a equipe 
 ## ⚙️ Como eu construo uma automação
 
 1. **Mapeio o processo manual** direto na tela: cada clique, campo e botão do sistema
-2. **Uso uma planilha Excel como entrada**, no formato que a equipe já trabalha
-3. **Automatizo com Python**: Playwright para sistemas web (Coupa, portais) e SAP GUI Scripting para o SAP
-4. **Valido o resultado**: confiro se o arquivo baixado é um PDF de verdade, se o registro aberto é o que foi buscado e gero lista do que falhou para reprocessar
-5. **Meço o tempo** da automação contra o processo manual
-6. **Uso IA (Claude)** como apoio para modelar a lógica, escrever e revisar o código
+2. **Uso a planilha que a equipe já trabalha como entrada**, sem obrigar ninguém a mudar o formato
+3. **Automatizo com Python**: Playwright para sistemas web e SAP GUI Scripting para o SAP
+4. **Valido cada etapa**: a automação confere se a ação deu certo antes de seguir para o próximo item e separa o que falhou para reprocessar
+5. **Não guardo senha no código**: o login é feito uma vez à mão num perfil de navegador salvo, e os dados do ambiente ficam em `.env`
+6. **Deixo rastro de tudo**: relatório de cada execução com o que deu certo, o que falhou e por quê, mais print da tela no erro
+7. **Meço o tempo** da automação contra o processo manual
+8. **Uso IA (Claude)** como apoio para modelar a lógica, escrever e revisar o código
 
 ---
 
 ## 🤖 Automações (RPA)
 
-### Destaques
+### 📥 Download de notas fiscais
+Baixa em lote os PDFs das notas fiscais que a área precisa arquivar todo mês, a partir da planilha de ocorrências.
 
-| Automação | O que faz | Resultado |
-|-----------|-----------|-----------|
-| 📥 **Download de notas fiscais** | Três scripts: baixa os PDFs das notas pelo SAP, busca as que faltam em um portal web e confere a pasta contra o relatório, gerando a lista de faltantes | Tarefa de ~6 dias/mês dividida entre 2 pessoas passou a ser feita por 1, na metade do tempo |
-| 🧾 **Geração de pedidos no Coupa** | Eu preencho o cabeçalho da requisição e a automação lança todas as linhas a partir da planilha, sugerindo códigos de item com base no texto da nota | 3x mais rápido que o lançamento manual |
-| 🎫 **[Fechamento de chamados no ServiceNow](https://github.com/Neres73/automacao_servicenow_chamados)** | Encerra chamados e ordens de serviço em lote | Processo que era dividido pela equipe hoje é feito por 1 pessoa |
+- Lê a planilha e encontra sozinha as colunas de nota e ocorrência pelo nome do cabeçalho (e pede confirmação antes de começar)
+- **No SAP**, consulta cada ocorrência via SAP GUI Scripting e captura o PDF gerado em segundo plano, sem depender de cliques na tela
+- O que não existe no SAP é buscado **no portal web** do sistema de notas com Playwright; antes de baixar, confere se o resultado na tela é mesmo a ocorrência buscada, para não salvar a nota errada
+- Confere se cada arquivo é um PDF de verdade, compara a pasta com a planilha e reprocessa só o que faltou
+- Gera relatório em Excel colorido por status e mostra progresso com estimativa de término
+
+**Resultado:** tarefa de ~6 dias/mês dividida entre 2 pessoas passou a ser feita por 1, na metade do tempo.
+`Python` `SAP GUI Scripting (win32com)` `Playwright` `openpyxl`
+
+### 🧾 Geração de pedidos no Coupa
+Lança requisições de compra no Coupa a partir da nota do fornecedor ou de uma planilha, uma requisição atrás da outra.
+
+- Lê a nota em vários formatos: **XML da NF-e**, texto ou PDF da DANFE (com regex) e até **PDF escaneado ou foto**, usando o OCR do próprio Windows
+- Distribui frete, ST e IPI entre os itens para as linhas fecharem exatamente no valor total da nota
+- Escolhe o código de item de cada linha por histórico, regras e semelhança de descrição, e verifica no Coupa se o item pode ser usado
+- **Aprende com o uso**: guarda os códigos aprovados e reprovados na própria planilha para as próximas execuções
+- Preenche cabeçalho, fornecedor, valores, centro de custo e conta; no fim, confere as linhas lançadas contra a nota
+- Dá para pausar, parar com segurança e continuar depois de onde parou
+
+**Resultado:** 3x mais rápido que o lançamento manual, com perfil pronto também para o fluxo de outra colega da equipe.
+`Python` `Playwright` `XML` `Regex` `OCR` `openpyxl`
+
+### 🎫 [Fechamento de chamados no ServiceNow](https://github.com/Neres73/automacao_servicenow_chamados)
+Encerra em lote as ordens de serviço já atendidas, a partir da planilha preenchida com os dados do atendimento.
+
+- Para cada chamado, localiza a tarefa, **confere se o técnico atribuído é o mesmo da planilha** e segue o fluxo de status até o encerramento
+- Preenche horários reais de início e fim, código de fechamento e quem validou
+- Confirma que cada mudança de status foi aceita pelo sistema antes de seguir (e tenta de novo se não foi)
+- Grava o status de volta na planilha e gera relatório CSV com a lista de falhas
+
+**Resultado:** processo que era dividido pela equipe hoje é feito por 1 pessoa.
+`Python` `Playwright` `openpyxl`
 
 ### Outras automações no Coupa
 
@@ -54,7 +84,7 @@ Boa parte dessa rotina é repetitiva. Quando identifico uma tarefa que a equipe 
 | ❌ **Cancelamento de pedidos** | Abre cada pedido e solicita o cancelamento |
 | 📄 **PDF de pedidos** | Baixa o PDF de cada pedido e salva com o número do pedido |
 
-**Stack:** Python · Playwright · SAP GUI Scripting · openpyxl · PyCharm
+`Python` `Playwright` `openpyxl`
 
 > Repositórios sem link são de uso interno e não estão públicos.
 
@@ -94,6 +124,8 @@ Boa parte dessa rotina é repetitiva. Quando identifico uma tarefa que a equipe 
   <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black"/>
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
 </p>
+
+Nas automações também uso: expressões regulares, leitura de XML, OCR local, `win32com`/`pywinauto` para janelas do Windows, variáveis de ambiente (`.env`), logs e relatórios em Excel/CSV.
 
 **Uso em projetos da faculdade:**
 
