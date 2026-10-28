@@ -38,7 +38,7 @@ Boa parte dessa rotina é repetitiva. Quando identifico uma tarefa que a equipe 
 
 ## 🤖 Automações (RPA)
 
-### 📥 Download de notas fiscais
+### 📥 [Download de notas fiscais](https://github.com/Neres73/baixar_nota)
 Baixa em lote os PDFs das notas fiscais que a área precisa arquivar todo mês, a partir da planilha de ocorrências.
 
 - Lê a planilha e encontra sozinha as colunas de nota e ocorrência pelo nome do cabeçalho (e pede confirmação antes de começar)
@@ -50,7 +50,7 @@ Baixa em lote os PDFs das notas fiscais que a área precisa arquivar todo mês, 
 **Resultado:** tarefa de ~6 dias/mês dividida entre 2 pessoas passou a ser feita por 1, na metade do tempo.
 `Python` `SAP GUI Scripting (win32com)` `Playwright` `openpyxl`
 
-### 🧾 Geração de pedidos no Coupa
+### 🧾 [Geração de pedidos no Coupa](https://github.com/Neres73/gerar_pedido)
 Lança requisições de compra no Coupa a partir da nota do fornecedor ou de uma planilha, uma requisição atrás da outra.
 
 - Lê a nota em vários formatos: **XML da NF-e**, texto ou PDF da DANFE (com regex) e até **PDF escaneado ou foto**, usando o OCR do próprio Windows
@@ -80,6 +80,7 @@ Encerra em lote as ordens de serviço já atendidas, a partir da planilha preenc
 |-----------|-----------|
 | ✅ **[Aprovações](https://github.com/Neres73/Coupa_aprovacoes)** | Aprova requisições abaixo de R$ 10 mil |
 | 📦 **[Recebimento](https://github.com/Neres73/Coupa_recebimento)** | Faz o recebimento das requisições listadas na planilha |
+| ↩️ **[Estorno de recebimentos](https://github.com/Neres73/Coupa_estorno)** | Anula todos os recibos de cada pedido da planilha no histórico de recebimentos |
 | 🔁 **Troca de fornecedor** | Percorre todas as linhas da requisição (inclusive em várias páginas), troca o fornecedor indefinido pelo CNPJ correto e submete para aprovação |
 | ❌ **Cancelamento de pedidos** | Abre cada pedido e solicita o cancelamento |
 | 📄 **PDF de pedidos** | Baixa o PDF de cada pedido e salva com o número do pedido |
