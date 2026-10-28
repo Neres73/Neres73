@@ -1,97 +1,71 @@
 <h1 align="center">Olá, eu sou o Neres 👋</h1>
 
 <p align="center">
-  <b>Estudante de Engenharia de Software · FIAP</b><br/>
-  Automação de Processos · Backend · Dados · Full Stack
+  <b>Automação de processos com Python · Engenharia de Software na FIAP</b><br/>
+  Aprendiz na área de Manutenção do GPA (Grupo Pão de Açúcar)
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2E75B6&center=true&vCenter=true&width=500&lines=Python+%7C+Java+%7C+SQL;RPA+%7C+Dados+%7C+Full+Stack;Transformando+processos+em+código" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2E75B6&center=true&vCenter=true&width=520&lines=Python+%2B+Playwright+%2B+SAP+GUI;Processo+manual+%E2%86%92+automa%C3%A7%C3%A3o;Automatize+o+que+%C3%A9+repetitivo" alt="Typing SVG" />
 </p>
 
 ---
 
 ## 👨‍💻 Sobre mim
 
-- 🎓 Cursando **Engenharia de Software** na **FIAP** (2º ano · formatura em 2028)
-- 🤖 Desenvolvo **automações de processo** com Python para o dia a dia corporativo no **GPA** — SAP GUI, Coupa, ServiceNow e portais web
-- 📈 Minhas automações já tiraram dias de trabalho manual por mês da equipe de Manutenção
-- 📊 Construí meu primeiro **dashboard em Power BI** para a fila de pagamentos da área
-- 🧠 Uso **IA aplicada** (Claude) no desenvolvimento: modelagem da lógica, escrita e revisão de código
-- ☕ Estudando **back-end com Java** (POO, DDD) e **Data Science** com Python
+Trabalho no back-office da Manutenção do GPA: contas a pagar, notas fiscais de serviço (NFS-e), pedidos de compra no **Coupa**, ocorrências no **SAP** e chamados no **ServiceNow**, com contato direto com fornecedores.
+
+Boa parte dessa rotina é repetitiva. Quando identifico uma tarefa que a equipe faz na mão, item por item, eu transformo em uma automação em Python. Hoje várias delas rodam no dia a dia da área.
+
+- 🎓 Engenharia de Software na **FIAP** (2º ano · formatura em dez/2028)
+- 🌎 Inglês avançado
+- 🔎 Aberto a oportunidades de **estágio em desenvolvimento, automação ou dados**
 
 ---
 
-## 🛠️ Tecnologias & Ferramentas
+## ⚙️ Como eu construo uma automação
 
-**✨ Linguagens:**
-
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
-</p>
-
-**🤖 Automação:**
-
-<p>
-  <img src="https://img.shields.io/badge/Playwright-45ba4b?style=for-the-badge&logo=playwright&logoColor=white"/>
-  <img src="https://img.shields.io/badge/SAP_GUI_Scripting-0FAAFF?style=for-the-badge&logo=sap&logoColor=white"/>
-  <img src="https://img.shields.io/badge/openpyxl-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white"/>
-</p>
-
-**📊 Dados:**
-
-<p>
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white"/>
-</p>
-
-**🌐 Web & Ferramentas:**
-
-<p>
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
-  <img src="https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=pycharm&logoColor=white"/>
-</p>
+1. **Mapeio o processo manual** direto na tela: cada clique, campo e botão do sistema
+2. **Uso uma planilha Excel como entrada**, no formato que a equipe já trabalha
+3. **Automatizo com Python**: Playwright para sistemas web (Coupa, portais) e SAP GUI Scripting para o SAP
+4. **Valido o resultado**: confiro se o arquivo baixado é um PDF de verdade, se o registro aberto é o que foi buscado e gero lista do que falhou para reprocessar
+5. **Meço o tempo** da automação contra o processo manual
+6. **Uso IA (Claude)** como apoio para modelar a lógica, escrever e revisar o código
 
 ---
 
-## 🔧 O que eu construo
+## 🤖 Automações (RPA)
 
-```text
-🤖 Automação / RPA    ████████████████████  Python + Playwright + SAP GUI Scripting
-📊 Dados / BI          █████████████░░░░░░░  Pandas + Power BI + Streamlit + Jupyter
-☕ Backend / Java      ███████████░░░░░░░░░  Java + POO + DDD
-🌐 Front-end           ███████████░░░░░░░░░  React + HTML5 + CSS3 + JavaScript
-🗄️ Banco de Dados      ██████████░░░░░░░░░░  Oracle SQL + Modelagem relacional
-```
+### Destaques
+
+| Automação | O que faz | Resultado |
+|-----------|-----------|-----------|
+| 📥 **Download de notas fiscais** | Três scripts: baixa os PDFs das notas pelo SAP, busca as que faltam em um portal web e confere a pasta contra o relatório, gerando a lista de faltantes | Tarefa de ~6 dias/mês dividida entre 2 pessoas passou a ser feita por 1, na metade do tempo |
+| 🧾 **Geração de pedidos no Coupa** | Eu preencho o cabeçalho da requisição e a automação lança todas as linhas a partir da planilha, sugerindo códigos de item com base no texto da nota | 3x mais rápido que o lançamento manual |
+| 🎫 **[Fechamento de chamados no ServiceNow](https://github.com/Neres73/automacao_servicenow_chamados)** | Encerra chamados e ordens de serviço em lote | Processo que era dividido pela equipe hoje é feito por 1 pessoa |
+
+### Outras automações no Coupa
+
+| Automação | O que faz |
+|-----------|-----------|
+| ✅ **[Aprovações](https://github.com/Neres73/Coupa_aprovacoes)** | Aprova requisições abaixo de R$ 10 mil |
+| 📦 **[Recebimento](https://github.com/Neres73/Coupa_recebimento)** | Faz o recebimento das requisições listadas na planilha |
+| 🔁 **Troca de fornecedor** | Percorre todas as linhas da requisição (inclusive em várias páginas), troca o fornecedor indefinido pelo CNPJ correto e submete para aprovação |
+| ❌ **Cancelamento de pedidos** | Abre cada pedido e solicita o cancelamento |
+| 📄 **PDF de pedidos** | Baixa o PDF de cada pedido e salva com o número do pedido |
+
+**Stack:** Python · Playwright · SAP GUI Scripting · openpyxl · PyCharm
+
+> Repositórios sem link são de uso interno e não estão públicos.
 
 ---
 
-## 🏢 Automações em produção (GPA · Manutenção)
+## 📊 Dados & Análise
 
-Automações que uso no trabalho real, com ganho medido:
-
-| Automação | O que faz | Impacto | Tech |
-|-----------|-----------|---------|------|
-| 📥 **Download de notas fiscais (NFS-e)** | Baixa os PDFs das notas pelo SAP GUI e por um portal web, valida se o arquivo é PDF de verdade e gera a lista de faltantes para reprocessar | Tarefa de ~6 dias/mês dividida por 2 pessoas passou a ser feita por 1, em metade do tempo | Python, SAP GUI, Playwright |
-| 🧾 **Geração de pedidos no Coupa** | Lança as linhas da requisição a partir de planilha, sugerindo itens de catálogo com base no texto da nota | 3x mais rápido que o lançamento manual | Python, Playwright |
-| 🎫 **[Fechamento de chamados ServiceNow](https://github.com/Neres73/automacao_servicenow_chamados)** | Encerra ordens de serviço em lote | Processo de vários membros da equipe hoje feito por 1 | Python |
-| ✅ **[Coupa Aprovações](https://github.com/Neres73/Coupa_aprovacoes)** | Aprova requisições abaixo de um limite de valor | — | Python, Playwright |
-| 📦 **[Coupa Recebimento](https://github.com/Neres73/Coupa_recebimento)** | Faz o recebimento de requisições a partir de planilha | — | Python, Playwright |
-| 🔁 **Coupa: troca de fornecedor, cancelamento e PDF de pedidos** | Família de scripts que atualizam fornecedor das linhas, cancelam pedidos e baixam o PDF de cada pedido, tudo a partir de planilha | — | Python, Playwright |
-| 🔍 **Matching de contrato (LPU)** | Cruza 3.277 itens de contrato com 697 descrições de estoque de fornecedor usando fuzzy matching e regras de confiança por categoria | Preenchimento automático de planilha que seria item a item | Python, RapidFuzz, openpyxl |
-| 📊 **Dashboard de fila de pagamentos** | Power BI com KPIs, aging, top fornecedores e status da fila de notas pendentes | Primeiro BI da fila; antes era só planilha | Power BI |
-
-> Os repositórios sem link são de uso interno e não estão públicos.
+| Projeto | O que faz | Tech |
+|---------|-----------|------|
+| 📈 **Dashboard da fila de pagamentos** | Meu primeiro BI: acompanha as notas pendentes de pagamento da Manutenção com KPIs de valor e quantidade, aging, top fornecedores e status. Antes, a fila era acompanhada só em planilha | Power BI, Power Query |
+| 🔍 **Cruzamento de contrato com estoque de fornecedor** | Compara 3.277 itens de contrato com 697 descrições do estoque de um fornecedor. As descrições não batem palavra por palavra (abreviações, texto cortado), então usei fuzzy matching com regras de confiança por categoria e saída colorida por faixa de certeza | Python, RapidFuzz, openpyxl |
 
 ---
 
@@ -99,12 +73,47 @@ Automações que uso no trabalho real, com ganho medido:
 
 | Projeto | Descrição | Tech |
 |---------|-----------|------|
-| 📡 **[Bateia](https://github.com/RafaellSantiagoMS/bateia-app)** | Plataforma de inteligência conversacional para o time comercial da TOTVS: transcrições de reuniões viram resumo, sinais de churn/up-sell e Índice de Trusted Advisor — GS FIAP 2026 | React, Vite |
-| 📈 **Regressão Linear + Streamlit** | Comparação de modelos (baseline, simples, múltipla e polinomial) por MAE/RMSE/R², com app interativo — Data Science & Statistical Computing | Python, Pandas, Streamlit |
+| 📡 **[Bateia](https://github.com/RafaellSantiagoMS/bateia-app)** | Plataforma de inteligência conversacional para o time comercial da TOTVS: transcrições de reuniões viram resumo, sinais de churn/up-sell e Índice de Trusted Advisor — GS FIAP 2026, em grupo | React, Vite |
+| 📉 **Regressão Linear + Streamlit** | Compara modelos de regressão (baseline, simples, múltipla e polinomial) por MAE, RMSE e R², com app interativo — em grupo | Python, Pandas, Streamlit |
 | 🧮 **[Dynamic Programming](https://github.com/Neres73/Dynamic-programming)** | Estação terrestre que recebe e processa alertas de queimadas, enchentes e deslizamentos captados por satélites — GS FIAP 2026 | Python |
-| ⚽ **[PassaBola](https://github.com/PedroMarchese01/Passa-Bola)** | Sistema web de gerenciamento de eventos esportivos com dashboard analytics, CRUD e geração de chaves — GS FIAP 2025 | React, Tailwind, Chart.js |
+| ⚽ **[PassaBola](https://github.com/PedroMarchese01/Passa-Bola)** | Sistema web de gerenciamento de eventos esportivos com dashboard, CRUD e geração de chaves — GS FIAP 2025, em grupo | React, Tailwind, Chart.js |
 | 🛰️ **SmartInfra Orbital** | Sistema de monitoramento de infraestrutura espacial (console app) | Java, DDD |
-| 🏠 **[Airbnb Clone](https://github.com/Neres73/CP-CAIO)** | Landing page responsiva simulando anúncio do Airbnb — Flexbox, Grid, galeria e avaliações | HTML5, CSS3 |
+| 🏠 **[Airbnb Clone](https://github.com/Neres73/CP-CAIO)** | Landing page responsiva simulando um anúncio do Airbnb — Flexbox, Grid, galeria e avaliações | HTML5, CSS3 |
+
+---
+
+## 🛠️ O que eu sei
+
+**Uso no dia a dia (trabalho):**
+
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Playwright-45ba4b?style=for-the-badge&logo=playwright&logoColor=white"/>
+  <img src="https://img.shields.io/badge/SAP_GUI_Scripting-0FAAFF?style=for-the-badge&logo=sap&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Excel_|_openpyxl-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+</p>
+
+**Uso em projetos da faculdade:**
+
+<p>
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Oracle_SQL-F80000?style=for-the-badge&logo=oracle&logoColor=white"/>
+</p>
+
+**Estudando agora:**
+
+<p>
+  <img src="https://img.shields.io/badge/Java_Back--End-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Scrum-6DB33F?style=for-the-badge&logo=scrumalliance&logoColor=white"/>
+</p>
 
 ---
 
