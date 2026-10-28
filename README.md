@@ -106,10 +106,11 @@ Encerra em lote as ordens de serviço já atendidas, a partir da planilha preenc
 |---------|-----------|------|
 | 📡 **[Bateia](https://github.com/RafaellSantiagoMS/bateia-app)** | Plataforma de inteligência conversacional para o time comercial da TOTVS: transcrições de reuniões viram resumo, sinais de churn/up-sell e Índice de Trusted Advisor — GS FIAP 2026, em grupo | React, Vite |
 | 📉 **Regressão Linear + Streamlit** | Compara modelos de regressão (baseline, simples, múltipla e polinomial) por MAE, RMSE e R², com app interativo — em grupo | Python, Pandas, Streamlit |
-| 🧮 **[Dynamic Programming](https://github.com/Neres73/Dynamic-programming)** | Estação terrestre que recebe e processa alertas de queimadas, enchentes e deslizamentos captados por satélites — GS FIAP 2026 | Python |
+| 🧮 **[Dynamic Programming](https://github.com/Neres73/Dynamic-programming)** | Estação terrestre que recebe e processa alertas de queimadas, enchentes e deslizamentos captados por satélites, usando fila, pilha e busca binária recursiva — GS FIAP 2026, em grupo | Python |
 | ⚽ **[PassaBola](https://github.com/PedroMarchese01/Passa-Bola)** | Sistema web de gerenciamento de eventos esportivos com dashboard, CRUD e geração de chaves — GS FIAP 2025, em grupo | React, Tailwind, Chart.js |
 | 🛰️ **SmartInfra Orbital** | Sistema de monitoramento de infraestrutura espacial (console app) | Java, DDD |
-| 🏠 **[Airbnb Clone](https://github.com/Neres73/CP-CAIO)** | Landing page responsiva simulando um anúncio do Airbnb — Flexbox, Grid, galeria e avaliações | HTML5, CSS3 |
+| 🌊 **Guia de Enchentes** ([site](https://github.com/Neres73/gs-front-end) · [Python](https://github.com/Neres73/gs-python)) | Site com áreas de risco, sinais de alerta, ações de emergência e quiz, mais uma versão em terminal — GS FIAP 2025 | HTML, CSS, JavaScript, Python |
+| 🏠 **[Airbnb Clone](https://github.com/Neres73/CP-CAIO)** | Landing page responsiva simulando um anúncio do Airbnb — Flexbox, Grid, galeria e avaliações — em dupla | HTML5, CSS3 |
 
 ---
 
