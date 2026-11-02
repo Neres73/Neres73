@@ -46,8 +46,9 @@ Lê notas fiscais de qualquer layout (NFS-e, DANFE, PDF livre), usa um LLM para 
 - Se a API da IA cair ou devolver algo fora do formato, cai num modo offline (regex) e marca a nota para revisão, sem quebrar o lote
 - Disponível como linha de comando (gera planilha Excel), **API FastAPI** e **fluxo no n8n** com formulário de envio
 - Testes automatizados que simulam a IA acertando, errando o formato e ficando fora do ar
+- **Parte 2 – conferência fiscal:** lê o XML da NFS-e (padrão nacional, ABRASF e Prefeitura de SP), extrai código de serviço e retenções (ISS, IRRF, PIS/COFINS/CSLL, INSS), confere com a base de parâmetros fiscais e gera os pedidos de correção para o SAP
 
-`Python` `Gemini / Claude API` `Engenharia de prompt` `Pydantic` `FastAPI` `n8n` `pytest`
+`Python` `Gemini / Claude API` `Engenharia de prompt` `Pydantic` `FastAPI` `n8n` `XML NFS-e` `SAP GUI Scripting` `pytest`
 
 ---
 
