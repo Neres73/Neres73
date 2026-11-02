@@ -19,7 +19,7 @@ Boa parte dessa rotina é repetitiva. Quando identifico uma tarefa que a equipe 
 
 - 🎓 Engenharia de Software na **FIAP** (2º ano · formatura em dez/2028)
 - 🌎 Inglês avançado
-- 🔎 Aberto a oportunidades de **estágio em desenvolvimento, automação ou dados**
+- 🔎 Aberto a oportunidades de **estágio em desenvolvimento, automação, dados ou IA**
 
 ---
 
@@ -33,6 +33,21 @@ Boa parte dessa rotina é repetitiva. Quando identifico uma tarefa que a equipe 
 6. **Deixo rastro de tudo**: relatório de cada execução com o que deu certo, o que falhou e por quê, mais print da tela no erro
 7. **Meço o tempo** da automação contra o processo manual
 8. **Uso IA (Claude)** como apoio para modelar a lógica, escrever e revisar o código
+
+---
+
+## 🧠 IA Generativa
+
+### 🧾 [Extrator de Notas Fiscais com IA](https://github.com/Neres73/extrator-notas-ia)
+Lê notas fiscais de qualquer layout (NFS-e, DANFE, PDF livre), usa um LLM para extrair os dados do contas a pagar e **confere tudo com regras de negócio antes de aceitar**. O que não passa vai para revisão humana, com o motivo escrito.
+
+- A IA (Gemini ou Claude) extrai fornecedor, CNPJ, número, datas, valor e itens em JSON
+- O código valida: dígito verificador do CNPJ, soma dos itens contra o total, vencimento depois da emissão, campos obrigatórios
+- Se a API da IA cair ou devolver algo fora do formato, cai num modo offline (regex) e marca a nota para revisão, sem quebrar o lote
+- Disponível como linha de comando (gera planilha Excel), **API FastAPI** e **fluxo no n8n** com formulário de envio
+- Testes automatizados que simulam a IA acertando, errando o formato e ficando fora do ar
+
+`Python` `Gemini / Claude API` `Engenharia de prompt` `Pydantic` `FastAPI` `n8n` `pytest`
 
 ---
 
@@ -128,6 +143,16 @@ Encerra em lote as ordens de serviço já atendidas, a partir da planilha preenc
 </p>
 
 Nas automações também uso: expressões regulares, leitura de XML, OCR local, `win32com`/`pywinauto` para janelas do Windows, variáveis de ambiente (`.env`), logs e relatórios em Excel/CSV.
+
+**IA e APIs (projetos pessoais):**
+
+<p>
+  <img src="https://img.shields.io/badge/Gemini_API-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Claude_API-D97757?style=for-the-badge&logo=anthropic&logoColor=white"/>
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
+  <img src="https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white"/>
+</p>
 
 **Uso em projetos da faculdade:**
 
