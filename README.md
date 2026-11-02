@@ -38,18 +38,16 @@ Boa parte dessa rotina é repetitiva. Quando identifico uma tarefa que a equipe 
 
 ## 🧠 IA Generativa
 
-### 🧾 [Extrator de Notas Fiscais com IA](https://github.com/Neres73/extrator-notas-ia)
-Lê notas fiscais de qualquer layout (NFS-e, DANFE, PDF livre), usa um LLM para extrair os dados do contas a pagar e **confere tudo com regras de negócio antes de aceitar**. O que não passa vai para revisão humana, com o motivo escrito.
+### 🧾 [Assistente de PLU para NFS-e (com IA)](https://github.com/Neres73/extrator-notas-ia)
+Lê a nota fiscal de serviço em PDF, aplica a base de parâmetros fiscais e diz qual item de compra (PLU) usar em cada ordem de manutenção, preenchendo a planilha que a macro do SAP já usa. Na dúvida, não chuta: marca a linha com o motivo.
 
-- A IA (Gemini ou Claude) extrai fornecedor, CNPJ, número, datas, valor e itens em JSON
-- O código valida: dígito verificador do CNPJ, soma dos itens contra o total, vencimento depois da emissão, campos obrigatórios
-- Se a API da IA cair ou devolver algo fora do formato, cai num modo offline (regex) e marca a nota para revisão, sem quebrar o lote
-- Disponível como linha de comando (gera planilha Excel), **API FastAPI** e **fluxo no n8n** com formulário de envio
-- Testes automatizados que simulam a IA acertando, errando o formato e ficando fora do ar
-- **Parte 2 – conferência fiscal:** lê o XML da NFS-e (padrão nacional, ABRASF e Prefeitura de SP), extrai código de serviço e retenções (ISS, IRRF, PIS/COFINS/CSLL, INSS), confere com a base de parâmetros fiscais e gera os pedidos de correção para o SAP
-- **Parte 3 – escolha do PLU:** lê o PDF da NFS-e, identifica código de serviço e retenções federais e, pela base de parâmetros fiscais, escolhe o item de compra (PLU) de cada ordem de manutenção, preenchendo a planilha usada pela macro do SAP
+- Leitura por regras do código de serviço (LC 116) e das retenções federais, em vários layouts de prefeitura
+- **IA (Gemini ou Claude) como leitora de reserva** para notas que as regras não entendem, com resposta validada e sem nunca decidir o PLU sozinha
+- Regra fiscal: fornecedor + código de serviço + tributação da nota → PLU, e aviso antecipado do que daria **crítica no agendamento** do pagamento
+- Uso por planilha (dois cliques), **API FastAPI** e **formulário no n8n**
+- 47 testes automatizados, inclusive simulando a IA errando o formato ou fora do ar
 
-`Python` `Gemini / Claude API` `Engenharia de prompt` `Pydantic` `FastAPI` `n8n` `XML NFS-e` `SAP GUI Scripting` `pytest`
+`Python` `Gemini / Claude API` `Engenharia de prompt` `Pydantic` `FastAPI` `n8n` `pypdf` `openpyxl` `pytest`
 
 ---
 
